@@ -1,11 +1,13 @@
 type HeaderProps = {
     title: string,
-    subtitle?:string
+    subtitle?: string
 }
-const Header: React.FC<HeaderProps> = ({ title }) => {
+const Header: React.FC<HeaderProps> = ({ title, subtitle }) => {
     return (
-        <div>{title}</div>
-    )
+<>
+<h1>{title.toUpperCase()}</h1>
+<h4>{subtitle}</h4>
+</>    )
 }
 
 export default Header
