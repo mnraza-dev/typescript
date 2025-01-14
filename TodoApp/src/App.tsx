@@ -1,10 +1,11 @@
+import React from "react"
+import AddTodo from "./components/AddTodo"
 
-function App() {
 
+ const App: React.FC = () => {
   return (
-    <main>
-      <h1>Todo App</h1>
-
+    <main className="max-w-3xl mx-auto m-5">
+   <AddTodo/>
     </main>
   )
 }
