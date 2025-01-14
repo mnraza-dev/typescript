@@ -30,16 +30,16 @@ var Status;
     Status["InProgress"] = "InProgress";
     Status["Completed"] = "Completed";
 })(Status || (Status = {}));
-var TaskStatus = Status.Completed;
-if (TaskStatus === "Pending") {
-    console.log("Status is Pending");
-}
-else if (TaskStatus === "InProgress") {
-    console.log("Status is In Progress");
-}
-else if (TaskStatus === Status.Completed) {
-    console.log("Status is Completed");
-}
+// const TaskStatus: Status = Status.Completed;
+// if (TaskStatus === "Pending") {
+//     console.log("Status is Pending");
+// }
+// else if (TaskStatus === "InProgress") {
+//     console.log("Status is In Progress");
+// }
+// else if (TaskStatus === Status.Completed) {
+//     console.log("Status is Completed");
+// }
 // union types
 var score = "66";
 // const score: number | string = 66;  // Valid
@@ -62,7 +62,7 @@ var user = {
     ]
 };
 var displayCarInfo = function (car) {
-    console.log("Car name is ".concat(car.make, " , it is mfgd in ").concat(car.year));
+    // console.log(`Car name is ${car.make} , it is mfgd in ${car.year}`);
 };
 displayCarInfo({
     make: "Suzuki",
@@ -71,3 +71,22 @@ displayCarInfo({
     year: 2011,
     isElectric: false
 });
+// function types
+function sum(a, b) {
+    return a + b;
+}
+var sum2;
+sum2 = sum;
+// console.log(sum2(78,7));
+var subs = function (a, b, cb) {
+    var res = a - b;
+    cb(res);
+};
+subs(100, 20, function (res) {
+    console.log(res);
+});
+// never type
+var generateError = function (message, code) {
+    throw { message: message, errorCode: code };
+};
+// generateError("An error occured", 500);

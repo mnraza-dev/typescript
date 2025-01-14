@@ -51,17 +51,17 @@ enum Status {
 }
 
 
-const TaskStatus: Status = Status.Completed;
+// const TaskStatus: Status = Status.Completed;
 
-if (TaskStatus === "Pending") {
-    console.log("Status is Pending");
-}
-else if (TaskStatus === "InProgress") {
-    console.log("Status is In Progress");
-}
-else if (TaskStatus === Status.Completed) {
-    console.log("Status is Completed");
-}
+// if (TaskStatus === "Pending") {
+//     console.log("Status is Pending");
+// }
+// else if (TaskStatus === "InProgress") {
+//     console.log("Status is In Progress");
+// }
+// else if (TaskStatus === Status.Completed) {
+//     console.log("Status is Completed");
+// }
 
 
 // union types
@@ -115,7 +115,7 @@ interface Car {
 }
 
 const displayCarInfo = (car: Car): void => {
-    console.log(`Car name is ${car.make} , it is mfgd in ${car.year}`);
+    // console.log(`Car name is ${car.make} , it is mfgd in ${car.year}`);
 }
 displayCarInfo({
     make: "Suzuki",
@@ -124,3 +124,31 @@ displayCarInfo({
     year: 2011,
     isElectric: false
 })
+
+// function types
+
+function sum(a: number, b: number): number {
+    return a + b;
+}
+
+let sum2 : (a : number, b: number) => number;
+sum2 = sum;
+// console.log(sum2(78,7));
+
+
+const subs = (a: number, b: number, cb: (a: number ) => void) => {
+    const res = a - b;
+    cb(res);
+}
+
+subs(100, 20, (res) => {
+    console.log(res);
+})
+
+// never type
+
+const generateError = (message: string, code: number): never => {
+    throw { message: message, errorCode: code }
+}
+
+// generateError("An error occured", 500);
