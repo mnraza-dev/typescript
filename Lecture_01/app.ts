@@ -102,3 +102,25 @@ const user: User = {
     ]
 }
 // console.log(user.skills);
+
+
+// interfaces
+
+interface Car {
+    make: string,
+    model: string,
+    year: number,
+    isElectric: boolean,
+    features: string[]
+}
+
+const displayCarInfo = (car: Car): void => {
+    console.log(`Car name is ${car.make} , it is mfgd in ${car.year}`);
+}
+displayCarInfo({
+    make: "Suzuki",
+    features: ["It has 8 airbags", "It has 4 color availability"],
+    model: "2011",
+    year: 2011,
+    isElectric: false
+})

@@ -61,4 +61,13 @@ var user = {
         'React Native'
     ]
 };
-console.log(user.skills);
+var displayCarInfo = function (car) {
+    console.log("Car name is ".concat(car.make, " , it is mfgd in ").concat(car.year));
+};
+displayCarInfo({
+    make: "Suzuki",
+    features: ["It has 8 airbags", "It has 4 color availability"],
+    model: "2011",
+    year: 2011,
+    isElectric: false
+});
