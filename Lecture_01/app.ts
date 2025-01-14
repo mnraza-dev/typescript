@@ -43,28 +43,41 @@ const tuple: [number, string, boolean] = [1, "2", true];
 // console.log(tuple);
 
 // Enums
+
 enum Status {
-    Pending,
-    InProgress,
-    Completed
+    Pending = "Pending",
+    InProgress = "InProgress",
+    Completed = "Completed"
 }
 
-const TaskStatus = Status.Completed;
 
-if (TaskStatus === Status.Pending) {
+const TaskStatus: Status = Status.Completed;
+
+if (TaskStatus === "Pending") {
     console.log("Status is Pending");
 }
-else if (TaskStatus === Status.InProgress) {
+else if (TaskStatus === "InProgress") {
     console.log("Status is In Progress");
 }
 else if (TaskStatus === Status.Completed) {
     console.log("Status is Completed");
 }
-else {
-    console.log("Invalid Status");
 
+
+// union types
+
+const score: number | string = "66";
+
+// const score: number | string = 66;  // Valid
+// const score: number | string = "Pass";  // Valid
+// const score: number | string = true;  // Error
+
+
+// type guards
+
+if (typeof score === "number") {
+    console.log("Score is number", score);
 }
-
-
-// 
-
+else if (typeof score === "string") {
+    console.log("Score is string", score);
+}

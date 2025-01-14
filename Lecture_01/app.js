@@ -26,11 +26,11 @@ var tuple = [1, "2", true];
 // Enums
 var Status;
 (function (Status) {
-    Status[Status["Pending"] = 0] = "Pending";
-    Status[Status["InProgress"] = 1] = "InProgress";
-    Status[Status["Completed"] = 2] = "Completed";
+    Status["Pending"] = "Pending";
+    Status["InProgress"] = "InProgress";
+    Status["Completed"] = "Completed";
 })(Status || (Status = {}));
-var TaskStatus = Status.InProgress;
+var TaskStatus = Status.Completed;
 if (TaskStatus === Status.Pending) {
     console.log("Status is Pending");
 }
@@ -40,6 +40,8 @@ else if (TaskStatus === Status.InProgress) {
 else if (TaskStatus === Status.Completed) {
     console.log("Status is Completed");
 }
-else {
-    console.log("Invalid Status");
-}
+// union types
+var score = "66";
+// const score: number | string = 66;  // Valid
+// const score: number | string = "Pass";  // Valid
+// const score: number | string = true;  // Error
