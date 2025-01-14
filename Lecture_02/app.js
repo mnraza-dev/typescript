@@ -21,3 +21,8 @@ const numberBox = {
 };
 console.log(box);
 console.log(numberBox);
+const user = {
+    name: 'MN Raza',
+    age: 30
+};
+console.log(user);

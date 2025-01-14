@@ -44,3 +44,18 @@ const numberBox: Box<number> = {
 }
 console.log(box);
 console.log(numberBox);
+
+
+// Generics Default Example - 02
+
+interface User<T = string> {
+    name: T,
+    age: number
+}
+
+const user: User = {
+    name: 'MN Raza',
+    age: 30
+}
+
+console.log(user);
