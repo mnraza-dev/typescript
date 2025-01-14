@@ -31,10 +31,10 @@ var Status;
     Status["Completed"] = "Completed";
 })(Status || (Status = {}));
 var TaskStatus = Status.Completed;
-if (TaskStatus === Status.Pending) {
+if (TaskStatus === "Pending") {
     console.log("Status is Pending");
 }
-else if (TaskStatus === Status.InProgress) {
+else if (TaskStatus === "InProgress") {
     console.log("Status is In Progress");
 }
 else if (TaskStatus === Status.Completed) {
@@ -45,3 +45,20 @@ var score = "66";
 // const score: number | string = 66;  // Valid
 // const score: number | string = "Pass";  // Valid
 // const score: number | string = true;  // Error
+// type guards
+if (typeof score === "number") {
+    console.log("Score is number", score);
+}
+else if (typeof score === "string") {
+    console.log("Score is string", score);
+}
+var user = {
+    name: "MN Raza",
+    age: 30,
+    isMarried: true,
+    skills: [
+        'ReactJS',
+        'React Native'
+    ]
+};
+console.log(user.skills);

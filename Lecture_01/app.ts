@@ -81,3 +81,24 @@ if (typeof score === "number") {
 else if (typeof score === "string") {
     console.log("Score is string", score);
 }
+
+
+// type aliases
+
+type User = {
+    name: string,
+    age: number,
+    isMarried: boolean,
+    skills: string[]
+}
+
+const user: User = {
+    name: "MN Raza",
+    age: 30,
+    isMarried: true,
+    skills: [
+        'ReactJS',
+        'React Native'
+    ]
+}
+// console.log(user.skills);
