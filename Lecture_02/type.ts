@@ -13,6 +13,8 @@ type ElevatedEmployee = Admin & Employee;
 type UnknownEmployee = Employee | Admin;
 
 function printEmployeeInfo(emp: UnknownEmployee) {
+    // type guards
+
     if ("privileges" in emp) {
         console.log("Privileges: " + emp.privileges);
     }
@@ -28,4 +30,6 @@ const emp1: ElevatedEmployee = {
 
 printEmployeeInfo(emp1);
 
+
+// 
 

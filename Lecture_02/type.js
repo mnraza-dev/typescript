@@ -1,5 +1,6 @@
 "use strict";
 function printEmployeeInfo(emp) {
+    // type guards
     if ("privileges" in emp) {
         console.log("Privileges: " + emp.privileges);
     }
@@ -12,3 +13,4 @@ const emp1 = {
     privileges: ["create-server"]
 };
 printEmployeeInfo(emp1);
+// 
