@@ -8,7 +8,7 @@ const App: React.FC = () => {
   const [todos, setTodos] = useState<Todo[]>([])
 
   const addTodohandler = (title: string) => {
-    const id = Math.floor(Math.random() * 1000)
+    const id = Math.floor(Math.random() * 1000) .toString();
     setTodos(
       [...todos,
       {
@@ -16,7 +16,7 @@ const App: React.FC = () => {
         title,
       }])
   }
-  const removeHandler = (id: number) => {
+  const removeHandler = (id: string) => {
     setTodos(todos.filter((todo: Todo) => todo.id !== id))
   }
 
