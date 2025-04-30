@@ -103,7 +103,7 @@ console.log(color);
  * Tuples are used to declare an array with a specific type that has a fixed number of elements,
  * 
  */
-const person: [string, number, boolean] = ['Moin', 21, true];
+const person: [string, number, boolean] = ['Gumrah', 21, true];
 console.log(person);
 
 /**
@@ -115,7 +115,7 @@ type Person = {
     isMarried: boolean,
 }
 const person1: Person = {
-    name: 'Moin',
+    name: 'Rahul',
     age: 21,
     isMarried: true,
 }
@@ -128,3 +128,22 @@ function add(a: number, b: number): number {
     return a + b;
 }
 console.log(add(1, 2));
+
+function add2(a: number, b: number): string {
+    return `${a} + ${b} = ${a + b}`;
+}
+console.log(add2(1, 2));
+
+/**
+ * Objects
+ */
+const person2: {
+    name: string,
+    age: number,
+    isMarried: boolean,
+} = {
+    name: 'MN Raza',
+    age: 21,
+    isMarried: true,
+};
+console.log(person2);
