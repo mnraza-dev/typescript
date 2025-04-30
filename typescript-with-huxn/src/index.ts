@@ -147,3 +147,18 @@ const person2: {
     isMarried: true,
 };
 console.log(person2);
+
+/**
+ * Interfaces
+ */
+interface Person2 {
+    name: string,
+    age: number,
+    isMarried: boolean,
+}
+const person3: Person2 = {
+    name: 'MN Raza',
+    age: 21,
+    isMarried: true,
+};
+console.log(person3);
