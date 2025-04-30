@@ -96,3 +96,12 @@ console.log(weather);
 let color: 'red' | 'green' | 'blue'
 color = 'red';
 console.log(color);
+
+/**
+ * Tuples
+ * 
+ * Tuples are used to declare an array with a specific type that has a fixed number of elements,
+ * 
+ */
+const person: [string, number, boolean] = ['Moin', 21, true];
+console.log(person);
