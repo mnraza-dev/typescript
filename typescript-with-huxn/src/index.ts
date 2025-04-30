@@ -67,10 +67,10 @@ console.log(password);
 password = 123456;
 console.log(password);
 
-
 /**
  * Enums Example 01
  */
+
 enum Role {
     ADMIN = 'admin',
     USER = 'user',
@@ -93,6 +93,6 @@ console.log(weather);
  * Literal types are used to declare a type that can only be one of a few specific values.
  * Literal types are useful when we want to ensure that a variable or parameter has a specific value.
  */
-type LiteralType = 'hello' | 'world' | 'goodbye';
-const literalType: LiteralType = 'hello';
-console.log(literalType);
+let color: 'red' | 'green' | 'blue'
+color = 'red';
+console.log(color);
