@@ -68,6 +68,17 @@ password = 123456;
 console.log(password);
 
 
+/**
+ * Enums Example 01
+ */
+enum Role {
+    ADMIN = 'admin',
+    USER = 'user',
+    GUEST = 'guest',
+}
+const role: Role = Role.ADMIN;
+console.log(role);
+
 
 
 
