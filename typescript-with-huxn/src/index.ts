@@ -180,6 +180,14 @@ const person4 = new Person3('MN Raza', true);
 console.log(person4);
 
 /**
+ * Generics
+ */
+function echo<T>(arg: T): T {
+    return arg;
+}
+console.log(echo<string>('Hello'));
+
+/**
  * Access Modifiers
  * 
  * In TS, you can use access modifiers to control the visibility of properties and methods in a class.
@@ -191,7 +199,8 @@ console.log(person4);
  * 
  * 🟢 Protected - Members marked as protected can be accessed from within the class they are defined in, as well as any subclasses that extend the class.
  * 
- */class Animal {
+ */
+class Animal {
     public name: string;
     private age: number;
     protected species: string;
@@ -227,3 +236,5 @@ class Dog extends Animal {
 
 const dog = new Dog('Buddy', 2, 'Labrador');
 console.log(dog.getInfo());
+
+
