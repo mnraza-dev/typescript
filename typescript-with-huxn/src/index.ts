@@ -79,10 +79,13 @@ enum Role {
 const role: Role = Role.ADMIN;
 console.log(role);
 
-
-
-
-
+enum WeatherConditions {
+    SUNNY = 'sunny',
+    RAINY = 'rainy',
+    CLOUDY = 'cloudy',
+}
+const weather: WeatherConditions = WeatherConditions.SUNNY;
+console.log(weather);
 
 /**
  * Literal Types:
