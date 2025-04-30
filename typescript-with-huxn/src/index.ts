@@ -162,3 +162,19 @@ const person3: Person2 = {
     isMarried: true,
 };
 console.log(person3);
+
+/**
+ * Classes
+ */
+class Person3 {
+    name: string;
+    age: number;
+    isMarried: boolean;
+    constructor(name: string, age: number, isMarried: boolean) {
+        this.name = name;
+        this.age = age;
+        this.isMarried = isMarried;
+    }
+}
+const person4 = new Person3('MN Raza', 21, true);
+console.log(person4);
