@@ -168,13 +168,62 @@ console.log(person3);
  */
 class Person3 {
     name: string;
-    age: number;
+    // age: number;
     isMarried: boolean;
-    constructor(name: string, age: number, isMarried: boolean) {
+    constructor(name: string, isMarried: boolean) {
         this.name = name;
-        this.age = age;
+        // this.age = age;
         this.isMarried = isMarried;
     }
 }
-const person4 = new Person3('MN Raza', 21, true);
+const person4 = new Person3('MN Raza', true);
 console.log(person4);
+
+/**
+ * Access Modifiers
+ * 
+ * In TS, you can use access modifiers to control the visibility of properties and methods in a class.
+ * There are three access modifiers in TS:
+ * 
+ * 🟢 Public - Members marked as Public can be accessed from anywhere, both inside and outside the class.
+ * 
+ * 🟢 Private - Members marked as private can be accessed from only within the class they are defined in.
+ * 
+ * 🟢 Protected - Members marked as protected can be accessed from within the class they are defined in, as well as any subclasses that extend the class.
+ * 
+ */class Animal {
+    public name: string;
+    private age: number;
+    protected species: string;
+
+    constructor(name: string, age: number, species: string) {
+        this.name = name;
+        this.age = age;
+        this.species = species;
+    }
+
+    public getName(): string {
+        return this.name;
+    }
+
+    public getAge(): number {
+        return this.age;
+    }
+
+    protected getSpecies(): string {
+        return this.species;
+    }
+}
+
+class Dog extends Animal {
+    constructor(name: string, age: number, species: string) {
+        super(name, age, species);
+    }
+
+    getInfo(): string {
+        return `${this.name} is ${this.getAge()} years old and is a ${this.species}.`;
+    }
+}
+
+const dog = new Dog('Buddy', 2, 'Labrador');
+console.log(dog.getInfo());
