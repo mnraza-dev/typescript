@@ -105,3 +105,18 @@ console.log(color);
  */
 const person: [string, number, boolean] = ['Moin', 21, true];
 console.log(person);
+
+/**
+ * Type Aliases
+ */
+type Person = {
+    name: string,
+    age: number,
+    isMarried: boolean,
+}
+const person1: Person = {
+    name: 'Moin',
+    age: 21,
+    isMarried: true,
+}
+console.log(person1);
