@@ -120,3 +120,11 @@ const person1: Person = {
     isMarried: true,
 }
 console.log(person1);
+
+/**
+ * Functions
+ */
+function add(a: number, b: number): number {
+    return a + b;
+}
+console.log(add(1, 2));
